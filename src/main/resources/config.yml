@@ -1,5 +1,11 @@
 version: '1.0.0' # Do not change configversion!
 use-luckperms: true # If you want to use LuckPerms, set this to true
 
+# Disable or enable functions
+# If you want to disable a function, set it to false
+# If you want to enable a function, set it to true
+command-blocker: true
+
 # If you want to relocate config files add a path (else leave it empty)
 language-path: ''
+command-blocklist-path: ''

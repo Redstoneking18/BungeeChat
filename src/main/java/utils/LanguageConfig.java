@@ -20,6 +20,11 @@ public class LanguageConfig {
         String folder = String.join("/", Arrays.copyOf(path.split("/"), path.split("/").length-1));
         String child = path.split("/")[path.split("/").length-1];
 
+
+        if (!new File(folder).exists()) {
+            new File(folder).mkdir();
+        }
+
         file = new File(folder, child);
 
         if (!file.exists()) {

@@ -1,0 +1,6 @@
+plugin:
+  message: 'This Command does not exist!' # Message sent to player when trying to execute the command (& for color codes; Nothing = no message)
+  aliases: # Aliases for the command
+    - pl
+  include-subcommands: false # If true, the subcommands will be included in the command list
+  bypass-permission: 'bungeechat.commandblocker.bypass' # Permission to bypass the command blocker
