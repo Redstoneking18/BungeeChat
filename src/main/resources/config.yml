@@ -1,0 +1,5 @@
+version: '1.0.0' # Do not change configversion!
+use-luckperms: true # If you want to use LuckPerms, set this to true
+
+# If you want to relocate config files add a path (else leave it empty)
+language-path: ''

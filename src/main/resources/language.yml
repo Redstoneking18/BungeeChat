@@ -1,0 +1,3 @@
+system:
+  plugin-loaded: '&aThe plugin "BungeeChat" has been loaded successfully!'
+  plugin-unloaded: '&cThe plugin "BungeeChat" has been unloaded successfully!'

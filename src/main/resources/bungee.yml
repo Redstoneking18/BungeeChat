@@ -1,0 +1,7 @@
+name: BungeeChat
+version: '${project.version}'
+main: de.keblex.bungeechat.BungeeChat
+author: Redstoneking18
+description: BungeeChat is a plugin for BungeeCord that allows you to customize the chat, add custom colors and more. Original designed for the server "keblex.de".
+softDepends:
+  - "LuckPerms"
