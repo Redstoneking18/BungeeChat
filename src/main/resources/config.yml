@@ -4,8 +4,19 @@ use-luckperms: true # If you want to use LuckPerms, set this to true
 # Disable or enable functions
 # If you want to disable a function, set it to false
 # If you want to enable a function, set it to true
-command-blocker: true
+command-blocker: true # Use the command-blcoker to block specific commands for player without a specific permission. Works for every command!
+plugin-command: true # Use the general plugin command (default /bungeechat or /bc) to reload configs and change settings.
+chat-system: true # Use the ChatSystem from the Plugin
 
 # If you want to relocate config files add a path (else leave it empty)
 language-path: ''
 command-blocklist-path: ''
+chat-path: ''
+
+# The following settings are for the general plugin command.
+# The general plugin command does only work if "plugin-command" is true.
+command-name: 'bungeechat' # Change the commandname for the /bungeechat-command.
+command-aliases: # Other aliases for the command
+  - 'bc'
+  - 'bchat'
+command-permission: 'bungeechat.plugincommand' # Default permission players use to use the command.

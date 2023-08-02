@@ -1,8 +1,8 @@
 package utils;
 
 /*
-    * This class is for the general config of the plugin.
-    * Design is from https://www.youtube.com/watch?v=3en6w7PNL08 @ Kody Simpson
+ * This class is for the general config of the plugin.
+ * Design is from https://www.youtube.com/watch?v=3en6w7PNL08 @ Kody Simpson
  */
 
 import de.keblex.bungeechat.BungeeChat;
@@ -22,11 +22,7 @@ public class GeneralConfig {
 
     // Setup
     public static void setup(BungeeChat plugin) {
-        if (!plugin.getDataFolder().exists()) {
-            plugin.getDataFolder().mkdir();
-        }
-
-        file = new File(plugin.getDataFolder(), "config.yml");
+        file = new File("./plugins/BungeeChat/", "config.yml");
 
         if (!file.exists()) {
             try (InputStream in = plugin.getResourceAsStream("config.yml")) {
@@ -38,6 +34,7 @@ public class GeneralConfig {
 
         try {
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
+            ConfigManager.gc = config;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -61,6 +58,7 @@ public class GeneralConfig {
     public static void reloadConfig() {
         try {
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
+            ConfigManager.gc = config;
         } catch (Exception e) {
             e.printStackTrace();
         }

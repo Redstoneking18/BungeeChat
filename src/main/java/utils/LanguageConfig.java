@@ -17,8 +17,8 @@ public class LanguageConfig {
 
     // Setup
     public static void setup(BungeeChat plugin, String path) {
-        String folder = String.join("/", Arrays.copyOf(path.split("/"), path.split("/").length-1));
-        String child = path.split("/")[path.split("/").length-1];
+        String folder = String.join("/", Arrays.copyOf(path.split("/"), path.split("/").length - 1));
+        String child = path.split("/")[path.split("/").length - 1];
 
 
         if (!new File(folder).exists()) {
@@ -37,6 +37,7 @@ public class LanguageConfig {
 
         try {
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
+            ConfigManager.lc = config;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,6 +61,7 @@ public class LanguageConfig {
     public static void reloadConfig() {
         try {
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(file);
+            ConfigManager.lc = config;
         } catch (Exception e) {
             e.printStackTrace();
         }

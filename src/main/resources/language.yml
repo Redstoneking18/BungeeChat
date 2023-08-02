@@ -1,5 +1,30 @@
-system:
+system: # General plugin messages
   plugin-loaded: '&aThe plugin "BungeeChat" has been loaded successfully!'
   plugin-unloaded: '&cThe plugin "BungeeChat" has been unloaded successfully!'
+  plugin-configs-loaded: '&aAll Plugin Configs has been loaded successfully!'
   plugin-listener-registered: '&aAll plugin listener has been registered successfully!'
+  plugin-commands-registered: '&aAll plugin commands has been registered successfully!'
   command-blocker-enabled: '&aThe command blocker has been enabled!'
+  plugin-command-enabled: '&aThe plugin command has been enabled!'
+
+command: # Messages for the plugin command (default /bungeechat or /bc).
+  permission: 'Missing permission for this command.' # If empty => Default message
+  subcommand-permission: 'Missing permission for this subcommand' # If empty => Default message (above)
+  usage: # Message if a player use the command without any arguments.
+    default: 'You can use the following arguments for the command:' # For the default information: No specific permissions needed; &n for new line!
+    info: '/info = See basic informations about the plugin' # Basic permission + ".info" needed to show this description.
+  info:
+    message:
+      - '&eThis server uses the BungeeChat Plugin from Redstoneking18 (Discord & Github) and other people:' # You can use colorcodes with &
+      - '&eThe current config version is: &2%version%' # You can use the %version% placeholder for the current config version.
+      - '&eCurrently are the following functions enabled: &2%functions_enabled%' # You can use %functions_enabled% placeholder to show the active functions.
+      - '&eCurrently are the following functions disabled: &2%functions_disabled%' # You can use %functions_disabled% placeholder to show the inactive functions.
+      - '&eThe current default command is: &2%config:command-name%' # You can use the %config:path% placeholder to show values from the config.
+      - '&eThe current default no permission message is is: &2%language:command.permission%' # You can use the %language:path% placeholder to show values from the language config.
+    usage: 'You have to many arguments for this command.&nUse: /bungeechat info'
+  reload:
+    message:
+      all: 'You have reloaded the whole plugin.'
+      language: 'You have reloaded the language file.'
+      commands: 'You have reloaded the command blocklist.'
+    usage: 'Use /bungeechat reload to reload the whole plugin.'
